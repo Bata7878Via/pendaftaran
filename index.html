@@ -11,9 +11,7 @@
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
         body {
-            /* 1. GAMBAR LATAR BELAKANG HALAMAN UTAMA (Tetap Seperti Awalnya) */
             background-image: url('https://raw.githubusercontent.com/Bata7878Via/images/refs/heads/main/Antena.jpg');
             background-size: cover;
             background-position: center;
@@ -25,15 +23,11 @@
             justify-content: center;
             align-items: center;
         }
-
         .container {
-            /* 2. GAMBAR LATAR BELAKANG KHUSUS KOTAK FORMULIR */
-            /* Anda dapat mengganti tautan URL gambar di bawah ini sesuai keinginan Anda */
             background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('https://raw.githubusercontent.com/Bata7878Via/images/refs/heads/main/allantena.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            
             width: 100%;
             max-width: 500px;
             padding: 25px 20px;
@@ -41,7 +35,6 @@
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
-
         h2 {
             text-align: center;
             color: #1a365d;
@@ -52,11 +45,24 @@
             border-bottom: 3px solid #3182ce;
             padding-bottom: 10px;
         }
-
+        .biaya-box {
+            background-color: #1a365d;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .biaya-box .harga {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #f6ad55;
+            margin-top: 5px;
+        }
         .form-group {
             margin-bottom: 20px;
         }
-
         label {
             display: block;
             font-weight: 600;
@@ -64,7 +70,6 @@
             margin-bottom: 4px;
             font-size: 0.95rem;
         }
-
         .info-text {
             display: block;
             font-size: 0.8rem;
@@ -74,51 +79,38 @@
             line-height: 1.3;
             font-weight: 500;
         }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        select,
-        textarea {
+        input[type="text"], input[type="email"], input[type="tel"], input[type="file"], select, textarea {
             width: 100%;
             padding: 14px;
             border: 2px solid #cbd5e0;
             border-radius: 8px;
-            font-size: 16px; 
+            font-size: 16px;
             color: #2d3748;
-            background-color: rgba(255, 255, 255, 0.85); /* Input semi-transparan agar latar kotak terlihat */
+            background-color: rgba(255, 255, 255, 0.85);
             outline: none;
             transition: border-color 0.2s;
-            -webkit-appearance: none;
         }
-
+        input[type="file"] {
+            background-color: white;
+            padding: 10px;
+            font-size: 14px;
+        }
         input:focus, select:focus, textarea:focus {
             border-color: #3182ce;
             box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
             background-color: #ffffff;
         }
-
-        select {
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://w3.org' viewBox='0 0 24 24' fill='none' stroke='%234a5568' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 14px center;
-            background-size: 16px;
-            padding-right: 40px;
-        }
-
         .animated-wrapper {
             max-height: 0;
             overflow: hidden;
             opacity: 0;
             transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
         }
-
         .animated-wrapper.show {
             max-height: 120px;
             opacity: 1;
             margin-top: 15px;
         }
-
         .btn-submit {
             width: 100%;
             background-color: #3182ce;
@@ -133,170 +125,259 @@
             transition: background-color 0.2s;
             margin-top: 10px;
         }
-
         .btn-submit:hover {
             background-color: #2b6cb0;
         }
-
+        .btn-submit:disabled {
+            background-color: #a0aec0;
+            cursor: not-allowed;
+        }
         .admin-section {
             margin-top: 30px;
             border-top: 1px dashed #cbd5e0;
             padding-top: 20px;
             text-align: center;
         }
-
-        .admin-title {
-            font-size: 0.85rem;
-            color: #4a5568;
-            margin-bottom: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
         .admin-buttons {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
+            display: flex; gap: 10px; margin-bottom: 20px;
         }
-
         .btn-admin {
-            flex: 1;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #38a169;
-            color: white;
-            text-decoration: none;
-            padding: 12px 8px;
-            font-size: 14px;
-            font-weight: 600;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(56, 161, 105, 0.2);
-            transition: background-color 0.2s;
+            flex: 1; display: inline-flex; justify-content: center; align-items: center; background-color: #38a169; color: white; text-decoration: none; padding: 12px 8px; font-size: 14px; font-weight: 600; border-radius: 8px; transition: background-color 0.2s;
         }
-
         .btn-admin:hover {
             background-color: #2f855a;
         }
-
         .copyright-text {
-            display: block;
-            font-size: 0.75rem;
-            color: #000000;
+            display: block; font-size: 0.75rem; color: #000000; text-align: center; margin-top: 15px; font-weight: 500;
+        }
+
+        /* --- POPUP SUKSES --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(26, 54, 93, 0.4); 
+            backdrop-filter: blur(4px); 
+            display: flex; justify-content: center; align-items: center;
+            z-index: 9999;
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+        .modal-overlay.active {
+            opacity: 1; pointer-events: auto;
+        }
+        .modal-content {
+            background: linear-gradient(to bottom, #ffffff, #f7fafc); 
+            padding: 35px 25px;
+            border-radius: 16px;
             text-align: center;
-            margin-top: 15px;
-            font-weight: 500;
-            letter-spacing: 0.3px;
+            max-width: 400px;
+            width: 90%;
+            border: 2px solid #3182ce; 
+            transform: scale(0.7) translateY(50px);
+            opacity: 0;
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+        }
+        .modal-overlay.active .modal-content {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+        .modal-icon-wrapper {
+            width: 70px; height: 70px;
+            background-color: rgba(49, 130, 206, 0.1); 
+            border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            margin: 0 auto 20px auto;
+            border: 2px solid #3182ce;
+        }
+        .modal-icon {
+            font-size: 38px; color: #3182ce; font-weight: bold;
+        }
+        .modal-title {
+            font-size: 1.4rem; color: #1a365d; font-weight: 700; margin-bottom: 12px;
+        }
+        .modal-text {
+            font-size: 0.95rem; color: #4a5568; margin-bottom: 25px; line-height: 1.5;
+        }
+        .btn-close-modal {
+            width: 100%;
+            background-color: #3182ce; color: white; border: none; padding: 14px; font-size: 15px; font-weight: 600; border-radius: 8px; cursor: pointer; transition: background-color 0.2s;
+        }
+        .btn-close-modal:hover {
+            background-color: #2b6cb0;
         }
 
         @media (max-width: 480px) {
-            body {
-                padding: 10px 10px;
-            }
-            .container {
-                padding: 20px 15px;
-            }
-            .admin-buttons {
-                flex-direction: column;
-                gap: 8px;
-            }
+            body { padding: 10px 10px; }
+            .container { padding: 20px 15px; }
+            .admin-buttons { flex-direction: column; gap: 8px; }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h2>Formulir Pendaftaran Lomba Experiment Antena 2M Band</h2>
-    
-    <form action="https://script.google.com/macros/s/AKfycbzz0lj8FE5JTHAFclHJBUgpNi-pLl5yQMFCyBvlXrffz__FzDZIzrkCIrL5_BT4l53y/exec" method="POST">
+    <div class="container">
+        <h2>Formulir Pendaftaran Lomba Experiment Antena 2M Band</h2>
         
-        <!-- Input Nama Asli -->
-        <div class="form-group">
-            <label for="nama_asli">Nama Asli :</label>
-            <span class="info-text">(Nama Sesuai KTP)</span>
-            <input type="text" id="nama_asli" name="nama_asli" required autocomplete="off">
+        <div class="biaya-box">
+            <div>Biaya Pendaftaran Per Antena:</div>
+            <div class="harga" id="infoBiaya">Rp 50.000,-</div>
+            <div style="font-size: 0.8rem; margin-top: 10px; color: #e2e8f0; line-height: 1.4;">
+                Transfer ke Rekening Panitia:<br>
+                <strong>BANK BCA : 123-4567-890</strong> a/n Om GoBel<br>
+                <strong>DANA/OVO : 0852-xxxx-xxxx</strong>
+            </div>
         </div>
 
-        <!-- Input Alamat -->
-        <div class="form-group">
-            <label for="alamat">Alamat (Nama Kota/Kabupaten):</label>
-            <span class="info-text">(Contoh : Kendari, Konawe, Dll)</span>
-            <input type="text" id="alamat" name="alamat" required autocomplete="off">
+        <form id="formPendaftaran" action="https://script.google.com/macros/s/AKfycbzz0lj8FE5JTHAFclHJBUgpNi-pLl5yQMFCyBvlXrffz__FzDZIzrkCIrL5_BT4l53y/exec" method="POST">
+            
+            <div class="form-group">
+                <label for="nama_asli">Nama Asli :</label>
+                <span class="info-text">(Nama Sesuai KTP)</span>
+                <input type="text" id="nama_asli" name="nama_asli" required autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="alamat">Alamat (Nama Kota/Kabupaten):</label>
+                <span class="info-text">(Contoh : Kendari, Konawe, Dll)</span>
+                <input type="text" id="alamat" name="alamat" required autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="jumlah_antena">Jumlah Antena :</label>
+                <span class="info-text">(Tiap Joki Maksimal 2 Antena)</span>
+                <select id="jumlah_antena" name="jumlah_antena" onchange="handleAntennaChange()" required>
+                    <option value="1">1 Antena</option>
+                    <option value="2">2 Antena</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="group_nama_lari_1">
+                <label for="nama_lari_1">Nama Lari 1 :</label>
+                <input type="text" id="nama_lari_1" name="nama_lari_1" required autocomplete="off">
+            </div>
+
+            <div class="animated-wrapper" id="group_nama_lari_2">
+                <label for="nama_lari_2">Nama Lari 2 :</label>
+                <input type="text" id="nama_lari_2" name="nama_lari_2" autocomplete="off">
+            </div>
+
+            <div class="form-group" style="margin-top: 20px;">
+                <label for="whatsapp">No WA :</label>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="Contoh: 0852xxxxxxxx" required>
+            </div>
+
+            <div class="form-group">
+                <label for="metode_bayar">Dikirim Melalui Bank/Aplikasi :</label>
+                <span class="info-text">(Contoh: BCA, BRI, Mandiri, DANA, dll)</span>
+                <input type="text" id="metode_bayar" name="metode_bayar" placeholder="Masukkan nama bank pengirim" required autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="bukti_transfer">Unggah Bukti Transfer :</label>
+                <span class="info-text">(Format Foto: JPG/PNG, Maksimal Berkas 5MB)</span>
+                <input type="file" id="bukti_transfer" accept="image/*" required>
+                <input type="hidden" id="bukti_base64" name="bukti_transfer_base64">
+            </div>
+
+            <div class="form-group">
+                <label for="catatan">Catatan Tambahan :</label>
+                <textarea id="catatan" name="catatan" rows="3" placeholder="Tulis catatan jika ada..."></textarea>
+            </div>
+
+            <button type="submit" id="btnSubmit" class="btn-submit">Kirim & Bayar (Total: Rp 50.000)</button>
+        </form>
+
+        <div class="admin-section">
+            <div class="admin-buttons">
+                <a href="https://wa.me/628124351542" target="_blank" class="btn-admin">💬 Admin 1</a>
+                <a href="https://wa.me/6285341301234" target="_blank" class="btn-admin">💬 Admin 2</a>
+            </div>
+            <span class="copyright-text">©2026 Om_GoBel All Rights Reserved</span>
         </div>
-
-        <!-- Input Jumlah Antena -->
-        <div class="form-group">
-            <label for="jumlah_antena">Jumlah Antena :</label>
-            <span class="info-text">(Tiap Joki Maksimal 2 Antena / Jika Mendaftarkan 2 Antena, Wajib Menggunakan 2 Nama Lari)</span>
-            <select id="jumlah_antena" name="jumlah_antena" onchange="handleAntennaChange()" required>
-                <option value="1">1 Antena</option>
-                <option value="2">2 Antena</option>
-            </select>
-        </div>
-
-        <!-- Kolom Nama Lari 1 -->
-        <div class="form-group" id="group_nama_lari_1">
-            <label for="nama_lari_1">Nama Lari 1 :</label>
-            <input type="text" id="nama_lari_1" name="nama_lari_1" required autocomplete="off">
-        </div>
-
-        <!-- Kolom Nama Lari 2 -->
-        <div class="animated-wrapper" id="group_nama_lari_2">
-            <label for="nama_lari_2">Nama Lari 2 :</label>
-            <input type="text" id="nama_lari_2" name="nama_lari_2" autocomplete="off">
-        </div>
-
-        <!-- Input Nomor WhatsApp -->
-        <div class="form-group" style="margin-top: 20px;">
-            <label for="whatsapp">No WA :</label>
-            <input type="tel" id="whatsapp" name="whatsapp" placeholder="Contoh: 0852xxxxxxxx" required>
-        </div>
-
-        <!-- Input Catatan Tambahan -->
-        <div class="form-group">
-            <label for="catatan">Catatan Tambahan :</label>
-            <textarea id="catatan" name="catatan" rows="3" placeholder="Tulis catatan jika ada..."></textarea>
-        </div>
-
-        <!-- Tombol Kirim Data -->
-        <button type="submit" class="btn-submit">Kirim Pendaftaran</button>
-    </form>
-
-    <!-- Bagian Kontak Admin & Hak Cipta -->
-    <div class="admin-section">
-        <div class="admin-title">Butuh Bantuan? Hubungi Kami</div>
-        <div class="admin-buttons">
-    <!-- ATUR NOMOR ADMIN 1 DI SINI (628124351542) -->
-    <a href="https://wa.me" target="_blank" class="btn-admin">
-        💬 Hubungi Admin 1 Bunda_Buyung
-    </a>
-    
-    <!-- ATUR NOMOR ADMIN 2 DI SINI (6285341301234) -->
-    <a href="https://wa.me" target="_blank" class="btn-admin">
-        💬 Hubungi Admin 2 Om_Buyung
-    </a>
-</div>
-        
-        <span class="copyright-text">©2026 Om_GoBel All Rights Reserved</span>
     </div>
-</div>
 
-<script>
-    function handleAntennaChange() {
-        const select = document.getElementById('jumlah_antena');
-        const wrapper2 = document.getElementById('group_nama_lari_2');
-        const input2 = document.getElementById('nama_lari_2');
+    <div class="modal-overlay" id="customModal">
+        <div class="modal-content">
+            <div class="modal-icon-wrapper"><span class="modal-icon">✓</span></div>
+            <div class="modal-title">Pendaftaran Berhasil!</div>
+            <div class="modal-text">Data pendaftaran dan bukti transfer Anda sedang diverifikasi oleh panitia.</div>
+            <button class="btn-close-modal" onclick="closePopup()">Selesai</button>
+        </div>
+    </div>
 
-        if (select.value === '2') {
-            wrapper2.classList.add('show');
-            input2.setAttribute('required', 'required');
-        } else {
-            wrapper2.classList.remove('show');
-            input2.removeAttribute('required');
-            input2.value = '';
+    <script>
+        const BIAYA_PER_ANTENA = 50000;
+
+        function handleAntennaChange() {
+            const select = document.getElementById('jumlah_antena');
+            const wrapper2 = document.getElementById('group_nama_lari_2');
+            const input2 = document.getElementById('nama_lari_2');
+            const btnSubmit = document.getElementById('btnSubmit');
+
+            const jumlah = parseInt(select.value);
+            const totalBiaya = jumlah * BIAYA_PER_ANTENA;
+            
+            btnSubmit.innerText = `Kirim & Bayar (Total: Rp ${totalBiaya.toLocaleString('id-ID')})`;
+
+            if (select.value === '2') {
+                wrapper2.classList.add('show');
+                input2.setAttribute('required', 'required');
+            } else {
+                wrapper2.classList.remove('show');
+                input2.removeAttribute('required');
+                input2.value = '';
+            }
         }
-    }
-</script>
+
+        document.getElementById('bukti_transfer').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                if (file.size > 5 * 1024 * 1024) {
+                    alert('Ukuran berkas terlalu besar! Maksimal ukuran file adalah 5MB.');
+                    e.target.value = '';
+                    return;
+                }
+                const reader = new FileReader();
+                reader.onloadend = function() {
+                    document.getElementById('bukti_base64').value = reader.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        const form = document.getElementById('formPendaftaran');
+        const btnSubmit = document.getElementById('btnSubmit');
+        const modal = document.getElementById('customModal');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+
+            btnSubmit.disabled = true;
+            btnSubmit.innerText = "Mengunggah Data & Bukti...";
+
+            const targetUrl = form.action;
+
+            fetch(targetUrl, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+            .then(response => {
+                modal.classList.add('active');
+                form.reset();
+                handleAntennaChange(); 
+                btnSubmit.disabled = false;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Gagal mengirim data. Pastikan koneksi internet stabil atau berkas foto tidak rusak.');
+                btnSubmit.disabled = false;
+                handleAntennaChange();
+            });
+        });
+
+        function closePopup() {
+            modal.classList.remove('active');
+        }
+    </script>
 </body>
 </html>
