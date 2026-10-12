@@ -132,26 +132,40 @@
             background-color: #a0aec0;
             cursor: not-allowed;
         }
+        
         .admin-section {
             margin-top: 30px;
             border-top: 1px dashed #cbd5e0;
             padding-top: 20px;
             text-align: center;
         }
+        .admin-title {
+            font-size: 1rem;
+            color: #1a365d;
+            margin-bottom: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
         .admin-buttons {
-            display: flex; gap: 10px; margin-bottom: 20px;
+            display: flex; gap: 10px; margin-bottom: 25px;
         }
         .btn-admin {
-            flex: 1; display: inline-flex; justify-content: center; align-items: center; background-color: #38a169; color: white; text-decoration: none; padding: 12px 8px; font-size: 14px; font-weight: 600; border-radius: 8px; transition: background-color 0.2s;
+            flex: 1; display: inline-flex; justify-content: center; align-items: center; background-color: #38a169; color: white; text-decoration: none; padding: 12px 8px; font-size: 14px; font-weight: 600; border-radius: 8px; box-shadow: 0 2px 4px rgba(56, 161, 105, 0.2); transition: background-color 0.2s;
         }
         .btn-admin:hover {
             background-color: #2f855a;
         }
         .copyright-text {
-            display: block; font-size: 0.75rem; color: #000000; text-align: center; margin-top: 15px; font-weight: 500;
+            display: block; 
+            font-size: 0.9rem;
+            color: #1a365d;
+            text-align: center; 
+            margin-top: 15px; 
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
 
-        /* --- POPUP SUKSES --- */
         .modal-overlay {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -200,10 +214,7 @@
         }
         .btn-close-modal {
             width: 100%;
-            background-color: #3182ce; color: white; border: none; padding: 14px; font-size: 15px; font-weight: 600; border-radius: 8px; cursor: pointer; transition: background-color 0.2s;
-        }
-        .btn-close-modal:hover {
-            background-color: #2b6cb0;
+            background-color: #3182ce; color: white; border: none; padding: 14px; font-size: 15px; font-weight: 600; border-radius: 8px; cursor: pointer;
         }
 
         @media (max-width: 480px) {
@@ -223,12 +234,12 @@
             <div class="harga" id="infoBiaya">Rp 25.000,-</div>
             <div style="font-size: 0.8rem; margin-top: 10px; color: #e2e8f0; line-height: 1.4;">
                 Transfer ke Rekening Bendahara (Admin 1):<br>
-                <strong>BANK BCA : 123-4567-890</strong> a/n Bunda_Adel<br>
+                <strong>BANK BCA : 123-4567-890</strong> a/n Banda_Adel<br>
                 <strong>DANA/OVO : 0852-xxxx-xxxx</strong>
             </div>
         </div>
 
-        <form id="formPendaftaran" action="https://script.google.com/macros/s/AKfycbzqNmRY4uh3Om4Ka3uY1pC64JrSSlDF8Ms2504KTchVVFy8x0uDyOzBvGVnWIfxRnFr8w/exec" method="POST">
+        <form id="formPendaftaran" action="https://script.google.com/macros/s/AKfycbzz0lj8FE5JTHAFclHJBUgpNi-pLl5yQMFCyBvlXrffz__FzDZIzrkCIrL5_BT4l53y/exec" method="POST">
             
             <div class="form-group">
                 <label for="nama_asli">Nama Asli :</label>
@@ -269,7 +280,7 @@
             <div class="form-group">
                 <label for="metode_bayar">Dibayar Melalui Bank/Aplikasi/Tunai :</label>
                 <span class="info-text">(Contoh: BCA, BRI, Mandiri, DANA, Tunai)</span>
-                <input type="text" id="metode_bayar" name="metode_bayar" placeholder="Masukkan nama bank pengirim" required autocomplete="off">
+                <input type="text" id="metode_bayar" name="metode_bayar" placeholder="Masukkan jenis metode pembayaran" required autocomplete="off">
             </div>
 
             <div class="form-group">
@@ -290,10 +301,10 @@
         <div class="admin-section">
             <div class="admin-title">Butuh Bantuan? Hubungi Kami</div>
             <div class="admin-buttons">
-                <a href="https://wa.me/6281354984971" target="_blank" class="btn-admin">💬 Admin 1 Bunda_Adel</a>
-                <a href="https://wa.me/6285241955122" target="_blank" class="btn-admin">💬 Admin 2 Om_Beddu</a>
+                <a href="https://wa.me/628124351542" target="_blank" class="btn-admin">💬 Admin 1 Bunda_Adel</a>
+                <a href="https://wa.me/6285341301234" target="_blank" class="btn-admin">💬 Admin 2 Om_Beddu</a>
             </div>
-            <span class="copyright-text">©2026 Om_GoBel. All Rights Reserved</span>
+            <span class="copyright-text">©2026 8ICG_GoBel. All Rights Reserved</span>
         </div>
     </div>
 
@@ -307,7 +318,7 @@
     </div>
 
     <script>
-        const BIAYA_PER_ANTENA = 25000;
+        const BIAYA_PER_ANTENA = 25000; 
 
         function handleAntennaChange() {
             const select = document.getElementById('jumlah_antena');
@@ -318,7 +329,7 @@
             const jumlah = parseInt(select.value);
             const totalBiaya = jumlah * BIAYA_PER_ANTENA;
             
-            btnSubmit.innerText = `Kirim, Daftar & Bayar (Total: Rp ${totalBiaya.toLocaleString('id-ID')})`;
+            btnSubmit.innerText = `Kirim Pendaftaran & Bayar (Total: Rp ${totalBiaya.toLocaleString('id-ID')})`;
 
             if (select.value === '2') {
                 wrapper2.classList.add('show');
@@ -370,7 +381,7 @@
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('Gagal mengirim data. Pastikan koneksi internet stabil atau berkas foto tidak rusak.');
+                alert('Gagal mengirim data. Pastikan koneksi internet stabil.');
                 btnSubmit.disabled = false;
                 handleAntennaChange();
             });
