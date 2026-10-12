@@ -220,10 +220,10 @@
         
         <div class="biaya-box">
             <div>Biaya Pendaftaran Per Antena:</div>
-            <div class="harga" id="infoBiaya">Rp 50.000,-</div>
+            <div class="harga" id="infoBiaya">Rp 25.000,-</div>
             <div style="font-size: 0.8rem; margin-top: 10px; color: #e2e8f0; line-height: 1.4;">
-                Transfer ke Rekening Panitia:<br>
-                <strong>BANK BCA : 123-4567-890</strong> a/n Om GoBel<br>
+                Transfer ke Rekening Bendahara (Admin 1):<br>
+                <strong>BANK BCA : 123-4567-890</strong> a/n Bunda_Adel<br>
                 <strong>DANA/OVO : 0852-xxxx-xxxx</strong>
             </div>
         </div>
@@ -267,13 +267,13 @@
             </div>
 
             <div class="form-group">
-                <label for="metode_bayar">Dikirim Melalui Bank/Aplikasi :</label>
-                <span class="info-text">(Contoh: BCA, BRI, Mandiri, DANA, dll)</span>
+                <label for="metode_bayar">Dibayar Melalui Bank/Aplikasi/Tunai :</label>
+                <span class="info-text">(Contoh: BCA, BRI, Mandiri, DANA, Tunai)</span>
                 <input type="text" id="metode_bayar" name="metode_bayar" placeholder="Masukkan nama bank pengirim" required autocomplete="off">
             </div>
 
             <div class="form-group">
-                <label for="bukti_transfer">Unggah Bukti Transfer :</label>
+                <label for="bukti_transfer">Unggah Bukti Transfer / Foto Tunai :</label>
                 <span class="info-text">(Format Foto: JPG/PNG, Maksimal Berkas 5MB)</span>
                 <input type="file" id="bukti_transfer" accept="image/*" required>
                 <input type="hidden" id="bukti_base64" name="bukti_transfer_base64">
@@ -284,15 +284,15 @@
                 <textarea id="catatan" name="catatan" rows="3" placeholder="Tulis catatan jika ada..."></textarea>
             </div>
 
-            <button type="submit" id="btnSubmit" class="btn-submit">Kirim & Bayar (Total: Rp 50.000)</button>
+            <button type="submit" id="btnSubmit" class="btn-submit">Kirim & Bayar (Total: Rp 25.000)</button>
         </form>
 
         <div class="admin-section">
             <div class="admin-buttons">
-                <a href="https://wa.me/628124351542" target="_blank" class="btn-admin">💬 Admin 1</a>
-                <a href="https://wa.me/6285341301234" target="_blank" class="btn-admin">💬 Admin 2</a>
+                <a href="https://wa.me/6281354984971" target="_blank" class="btn-admin">💬 Admin 1 Bunda_Adel</a>
+                <a href="https://wa.me/6285241955122" target="_blank" class="btn-admin">💬 Admin 2 Om_Beddu</a>
             </div>
-            <span class="copyright-text">©2026 Om_GoBel All Rights Reserved</span>
+            <span class="copyright-text">©2026 Om_GoBel. All Rights Reserved</span>
         </div>
     </div>
 
@@ -300,13 +300,13 @@
         <div class="modal-content">
             <div class="modal-icon-wrapper"><span class="modal-icon">✓</span></div>
             <div class="modal-title">Pendaftaran Berhasil!</div>
-            <div class="modal-text">Data pendaftaran dan bukti transfer Anda sedang diverifikasi oleh panitia.</div>
+            <div class="modal-text">Data pendaftaran dan bukti transfer Anda sedang diverifikasi oleh Admin.</div>
             <button class="btn-close-modal" onclick="closePopup()">Selesai</button>
         </div>
     </div>
 
     <script>
-        const BIAYA_PER_ANTENA = 50000;
+        const BIAYA_PER_ANTENA = 25000;
 
         function handleAntennaChange() {
             const select = document.getElementById('jumlah_antena');
@@ -317,7 +317,7 @@
             const jumlah = parseInt(select.value);
             const totalBiaya = jumlah * BIAYA_PER_ANTENA;
             
-            btnSubmit.innerText = `Kirim & Bayar (Total: Rp ${totalBiaya.toLocaleString('id-ID')})`;
+            btnSubmit.innerText = `Kirim, Daftar & Bayar (Total: Rp ${totalBiaya.toLocaleString('id-ID')})`;
 
             if (select.value === '2') {
                 wrapper2.classList.add('show');
